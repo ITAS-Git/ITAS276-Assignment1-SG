@@ -1,4 +1,4 @@
-name: Build docker image and deploy
+name: Build docker image and deploy to wmd docker server
 
 on:
     push:
