@@ -37,6 +37,9 @@ jobs:
         runs-on: itas276-sglencross
         #needs: package
         steps:
+            -   name: Copy Repo Files
+                uses: actions/checkout@master
+                
             -   name: Docker compose
                 run: |
                     docker-compose build
