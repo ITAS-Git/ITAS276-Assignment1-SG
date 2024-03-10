@@ -7,7 +7,7 @@ on:
       branches: [ "master" ]
     
 jobs:
-    build:
+    package:
       runs-on: ubuntu-latest
       steps:
         -
@@ -30,3 +30,25 @@ jobs:
             file: ./Dockerfile
             push: true
             tags: seanglencrossitas/itas276-nodegoat:latest
+    
+    deploy:
+        name: "Deploy to ITAS WMD server"
+        runs-on: itas276-sglencross
+        needs: package
+        steps:
+            -   name: Docker pull
+                run: |
+                    mkdir ~/Assignment1
+                    echo "TEST" > ~/Assignment1/test.txt
+                    END
+                #env:
+                    #SSH_USER: ${{ vars.SSH_USER }}
+                    #SSH_KEY: ${{ secrets.SSH_KEY }}
+                    #SSH_HOST: ${{ vars.SSH_HOSTNAME }}
+    
+            -   name: Stop and remove docker container
+                run: echo 'STOP DOCKER'
+    
+            -   name: Check out the source
+                run: echo 'START DOCKER'
+    
