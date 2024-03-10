@@ -39,9 +39,12 @@ jobs:
         steps:
             -   name: Copy Repo Files
                 uses: actions/checkout@master
-                
+
             -   name: Docker compose
                 run: |
+                    echo whoami
+                    echo ls -lah
+                    echo pwd
                     docker-compose build
                     docker-compose up
                     
