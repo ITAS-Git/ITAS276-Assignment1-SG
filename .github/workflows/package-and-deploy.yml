@@ -42,9 +42,9 @@ jobs:
 
             -   name: Docker compose
                 run: |
-                    echo whoami
-                    echo ls -lah
-                    echo pwd
+                    whoami
+                    ls -lah
+                    pwd
                     docker-compose build
                     docker-compose up
                     
