@@ -29,6 +29,10 @@ jobs:
             image: seanglencrossitas/itas276-nodegoat:latest
             args: --file=Dockerfile
             sarif: true
+        - name: list files    
+          run: |
+                    ls -lah
+           
 
         - name: save report as pipeline artifact
           uses: actions/upload-artifact@v3
