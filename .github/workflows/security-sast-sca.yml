@@ -3,9 +3,9 @@ name: Assignment 1 DevSecOps standard security pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
     SCA-Snyk:
